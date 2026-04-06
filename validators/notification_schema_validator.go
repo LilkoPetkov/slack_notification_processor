@@ -22,14 +22,3 @@ func ValidateNotificationRequestSchema(nrsObject *rs.NotificationRequestSchema) 
 
 	return nil
 }
-
-func ValidateServiceSchema(scObject *rs.ServiceRequestSchema) error {
-	if scObject.ServiceName == "" {
-		return fmt.Errorf("field 'service_name' is required")
-	}
-	if len(scObject.WebHookUrls) == 0 {
-		return fmt.Errorf("field 'webhook_urls' is required")
-	}
-
-	return nil
-}
