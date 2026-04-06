@@ -6,6 +6,6 @@ import (
 )
 
 func SetupRoutes(r *gin.Engine, v1Group *gin.RouterGroup) {
-	v1Group.POST("/register-service", handlers.UserHandler())
+	v1Group.POST("/register-service", handlers.ServiceHandler())
 	v1Group.POST("/send-notification", handlers.MessageHandler())
 }
